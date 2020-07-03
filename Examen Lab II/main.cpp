@@ -1,38 +1,29 @@
 #include "ListaEmpleados.h"
 #include <conio.h>
-#include <iostream>
+
 int main()
 {
-	ListaEmpleados le;
+	ListaEmpleados alo;
 
-	le.agregarEmpleado(1, "David", 6000);
-	le.agregarEmpleado(2, "Raul", 5000);
-	le.agregarEmpleado(3, "Jose", 7000);
-	le.agregarEmpleado(4, "Manuel", 3000);
+	
+	alo.agregarElemento(4, "fer", 1000);
+	alo.agregarElemento(2, "carlos", 2000);
+	alo.agregarElemento(3, "juan", 3000);
+	alo.agregarElemento(1, "jose", 5000);
+	alo.imprimirLista();
 
-	cout << "Cantidad de empleados: " << le.obtenerCantidadEmpleados();
+	alo.desactivarEmpleado(4);
+	alo.obtenerCantidadEmpleados();
+	alo.imprimirLista();
+	
+	alo.eliminarEmpleado(1);
+	alo.imprimirLista();
+	alo.obtenerCantidadEmpleados();
 
-	le.imprimirLista();
+	alo.actualizarSalarios(0.7);
+	alo.imprimirLista();
 
-	le.desactivarEmpleado(3);
+	alo.guardarEmpleados();
 
-	le.imprimirLista();
-
-	le.desactivarEmpleado(3);
-
-	le.imprimirLista();
-
-	le.actualizarSalarios(0.50);
-
-	le.imprimirLista();
-
-	le.eliminarEmpleado(2);
-
-	le.imprimirLista();
-
-	le.obtenerCantidadEmpleados();
-
-	le.guardarEmpleados();
-
-
+	_getch();
 }

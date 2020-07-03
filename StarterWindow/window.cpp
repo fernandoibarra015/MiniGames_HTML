@@ -100,49 +100,73 @@ void Window::pollEvents()
 
 			switch (event.key.keysym.sym)
 			{
-			case SDLK_SPACE:
-				/*SDL_SetRenderDrawColor(_renderer, 0, 0, 255, 0);*/
-				clear();
-				display();
-				displayQuestions();	
-			}
-
-			switch (event.key.keysym.sym) {
 			case SDLK_1:
-				SDL_Texture* incorrecto = loadTexture("incorrecto.png");
+				SDL_Texture* ins = loadTexture("Instrucciones.jpeg");
+				
 				clear();
-				renderer(incorrecto);
+				renderer(ins);
 				display();
-				Sleep(2000);
-				SDL_SetRenderDrawColor(_renderer, 0, 0, 255, 0);
-				clear();				
-				displayQuestions();
-				break;
+				Sleep(5000);
+
+				SDL_Texture* p1 = loadTexture("Pregunta1.jpeg");
+				clear();
+				renderer(p1);
+				display();
+				/*displayQuestions();*/	
 			}
 
 			switch (event.key.keysym.sym) {
 			case SDLK_2:
-				SDL_Texture* correcto = loadTexture("correcto.png");
+				SDL_Texture* p2 = loadTexture("Pregunta2.jpeg");
 				clear();
-				renderer(correcto);
+				renderer(p2);
 				display();
-				Sleep(2000);
-				SDL_SetRenderDrawColor(_renderer, 0, 0, 255, 0);
+				break;
+			}
+			
+			switch (event.key.keysym.sym) {
+			case SDLK_3:
+				SDL_Texture* p3 = loadTexture("Pregunta3.jpeg");
 				clear();
-				displayQuestions2();
+				renderer(p3);
+				display();
 				break;
 			}
 
 			switch (event.key.keysym.sym) {
-			case SDLK_3:
+			case SDLK_4:
+				SDL_Texture* p4 = loadTexture("Pregunta4.jpeg");
+				clear();
+				renderer(p4);
+				display();
+				break;
+			}
+
+			switch (event.key.keysym.sym) {
+			case SDLK_5:
+				SDL_Texture* p5 = loadTexture("congrats.jpg");
+				clear();
+				renderer(p5);
+				display();
+				break;
+			}
+
+			switch (event.key.keysym.sym) {
+			case SDLK_a:
+				SDL_Texture* correcto = loadTexture("correcto.png");
+				clear();
+				renderer(correcto);
+				display();
+				break;
+			}
+
+			switch (event.key.keysym.sym) {
+			case SDLK_b:
 				SDL_Texture* incorrecto = loadTexture("incorrecto.png");
 				clear();
 				renderer(incorrecto);
 				display();
-				Sleep(2000);
-				SDL_SetRenderDrawColor(_renderer, 0, 0, 255, 0);
-				clear();
-				displayQuestions();
+				
 				break;
 			}
 			

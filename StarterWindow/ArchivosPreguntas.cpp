@@ -6,7 +6,7 @@ using namespace std;
 
 void regisPreguntas() {
 
-	preguntas preg;
+	/*preguntas preg;
 	ofstream preguntasOut("preguntas.bin", ios::binary);
 	strcpy(preg.pregunta, "Cual es el acronimo para Hypertext Markup Language?");
 	strcpy(preg.respuesta, "HTML");
@@ -33,5 +33,5 @@ void regisPreguntas() {
 	strcpy(preg.respuestaIncorrecta, "VBScript");
 
 	preguntasOut.write((char*)&preg, sizeof(preguntas));
-	preguntasOut.close();
+	preguntasOut.close();*/
 }

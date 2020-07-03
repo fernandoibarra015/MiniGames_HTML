@@ -1,6 +1,6 @@
 #include "window.h"
 
-int main(int argc, char** argv)
+void correPreguntas()
 {
 	Window window("HTML", 800, 600);
 
@@ -9,5 +9,4 @@ int main(int argc, char** argv)
 		window.pollEvents();
 
 	}
-	return 0;
 }

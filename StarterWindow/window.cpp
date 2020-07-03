@@ -1,4 +1,5 @@
 #include "window.h"
+#include "ArchivoPreguntas.h"
 #include <Windows.h>
 #include <iostream>
 
@@ -153,6 +154,14 @@ void Window::pollEvents()
 				break;
 			}
 
+			/*switch (event.key.keysym.sym)
+			{
+			case SDLK_INSERT:
+				regisPreguntas();
+				displayQuestions();
+				break;
+			}*/
+
 		default:
 			break;
 		}
@@ -202,13 +211,13 @@ void Window::displayAvatar(){
 }
 
 void Window::displayQuestions(){
-	SDL_Texture* questions = loadTexture("question1.png");
+	/*SDL_Texture* questions = loadTexture("question1.png");
 	SDL_Texture* answer1 = loadTexture("respuesta1.png");
 	SDL_Texture* answer2 = loadTexture("respuesta2.png");
-	SDL_Texture* answer3 = loadTexture("respuesta3.png");
-	SDL_Texture* backgrounds = loadTexture("QuestionsBackground.jpeg");
+	SDL_Texture* answer3 = loadTexture("respuesta3.png");*/
+	SDL_Texture* backgrounds = loadTexture("Pregunta1.jpeg");
 
-	question.h = 100;
+	/*question.h = 100;
 	question.w = 300;
 	question.x = 250;
 	question.y = 50;
@@ -226,7 +235,7 @@ void Window::displayQuestions(){
 	respuesta3.h = 100;
 	respuesta3.w = 300;
 	respuesta3.x = 250;
-	respuesta3.y = 410;
+	respuesta3.y = 410;*/
 
 	background.w = 800;
 	background.h = 600;
@@ -234,10 +243,10 @@ void Window::displayQuestions(){
 	background.y = 0;
 
 	SDL_RenderCopy(_renderer, backgrounds, NULL, &background);
-	SDL_RenderCopy(_renderer, questions, NULL, &question);
+	/*SDL_RenderCopy(_renderer, questions, NULL, &question);
 	SDL_RenderCopy(_renderer, answer1, NULL, &respuesta1);
 	SDL_RenderCopy(_renderer, answer2, NULL, &respuesta2);
-	SDL_RenderCopy(_renderer, answer3, NULL, &respuesta3);
+	SDL_RenderCopy(_renderer, answer3, NULL, &respuesta3);*/
 	
 
 	SDL_RenderPresent(_renderer);

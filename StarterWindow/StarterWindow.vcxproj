@@ -19,10 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ArchivosPreguntas.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ArchivoPreguntas.h" />
     <ClInclude Include="window.h" />
   </ItemGroup>
   <ItemGroup>

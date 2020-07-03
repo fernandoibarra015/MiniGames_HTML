@@ -18,6 +18,7 @@ public:
 	void displayAvatar();
 	void displayQuestions();
 	void displayQuestions2();
+	
 
 	inline bool isClosed() { return _closed; }
 
